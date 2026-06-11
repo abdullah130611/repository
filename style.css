@@ -1,0 +1,98 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:linear-gradient(
+180deg,
+#050816,
+#0f172a,
+#1e293b
+);
+color:white;
+overflow-x:hidden;
+}
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.title{
+font-size:5rem;
+letter-spacing:10px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px #fff;
+}
+to{
+text-shadow:0 0 30px #38bdf8;
+}
+}
+
+.island{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+.card{
+width:700px;
+max-width:90%;
+padding:40px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:25px;
+transform:translateY(50px);
+opacity:0;
+transition:1s;
+}
+
+.card.show{
+transform:translateY(0);
+opacity:1;
+}
+
+.card h2{
+margin-bottom:20px;
+}
+
+.card ul{
+list-style:none;
+}
+
+.card li{
+margin:10px 0;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+z-index:-1;
+animation:moveStars 40s linear infinite;
+}
+
+@keyframes moveStars{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(1000px);
+}
+}
